@@ -1,0 +1,68 @@
+.calculator__top {
+    h1 {
+        margin-right: auto;
+        width: 15%;
+        text-align: center;
+    }
+    .slider{
+        margin-left: 1.5rem;
+        width: 15%;
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .slider__item, .slider__numbers {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        justify-items: center;
+    }
+    .slider__item {
+        background:$KeypadBg1;
+        padding: .2rem;
+        border-radius:20px;
+    }
+    .slider__ball {
+        background:$KeyBg1;
+        width: auto;
+        padding: .8rem;
+        border-radius: 50%;
+     }
+}
+
+.calculator__screen {
+    background:$ScreenBg1;
+    padding: 2rem;
+    border-radius: 10px;
+    .row {
+        justify-content:flex-end;
+    }
+    .screen__item {
+        font-size: 32px;
+        font-weight:700;
+        width: 90%;
+        padding:1rem;
+    }
+}
+
+.calculator__bottom {
+    background:$KeypadBg1;
+    .row {
+        justify-content: center;
+    }
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .calculator__buttons {
+        width:90%;
+        input {
+            font-size: 32px;
+            font-weight:700;
+            background:$KeyBg1;
+            color:$KeyText1
+        }
+    }
+    #reset, #sum {
+        grid-column: span 2;
+    }
+}

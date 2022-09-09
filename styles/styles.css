@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap"); /*    Theme 1      */
+/*main background*/
+/*toggle background, keypad background*/
+/* key background, toggle */
+/* key shadow */
+/* key background, toggle */
+/* key shadow */
+/* key background */
+/* key shadow */
+/*    Theme 2   */
+/* toggle background, keypad background */
+/* screen background */
+/* key background, toggle */
+/* key shadow */
+/* key background, toggle */
+/* key shadow */
+/* key background */
+/* key shadow */
+/*    Theme 3   */
+/* main background */
+/* Toggle background, keypad background, screen background */
+/* key background */
+/* key shadow */
+/* key background, toggle */
+/* key shadow */
+/* key background */
+/* key shadow */
+.calculator__top h1 {
+  margin-right: auto;
+  width: 15%;
+  text-align: center;
+}
+.calculator__top .slider {
+  margin-left: 1.5rem;
+  width: 15%;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+.calculator__top .slider__item, .calculator__top .slider__numbers {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-items: center;
+}
+.calculator__top .slider__item {
+  background: hsl(223deg, 31%, 20%);
+  padding: 0.2rem;
+  border-radius: 20px;
+}
+.calculator__top .slider__ball {
+  background: hsl(30deg, 25%, 89%);
+  width: auto;
+  padding: 0.8rem;
+  border-radius: 50%;
+}
+
+.calculator__screen {
+  background: hsl(224deg, 36%, 15%);
+  padding: 2rem;
+  border-radius: 10px;
+}
+.calculator__screen .row {
+  justify-content: flex-end;
+}
+.calculator__screen .screen__item {
+  font-size: 32px;
+  font-weight: 700;
+  width: 90%;
+  padding: 1rem;
+}
+
+.calculator__bottom {
+  background: hsl(223deg, 31%, 20%);
+}
+.calculator__bottom .row {
+  justify-content: center;
+}
+.calculator__bottom .grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+.calculator__bottom .calculator__buttons {
+  width: 90%;
+}
+.calculator__bottom .calculator__buttons input {
+  font-size: 32px;
+  font-weight: 700;
+  background: hsl(30deg, 25%, 89%);
+  color: hsl(221deg, 14%, 31%);
+}
+.calculator__bottom #reset, .calculator__bottom #sum {
+  grid-column: span 2;
+}
+
+body {
+  margin: 0;
+  background: hsl(222deg, 26%, 31%);
+  color: hsl(0deg, 0%, 100%);
+  font-family: "League Spartan", sans-serif;
+}
+
+main {
+  padding: 50px 0;
+}
+
+section {
+  width: 100%;
+  padding: 2rem;
+  margin: 2rem 0;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
+}/*# sourceMappingURL=styles.css.map */

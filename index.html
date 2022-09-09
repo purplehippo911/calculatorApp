@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <title>Calculator app</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <script src="https://unpkg.com/vue@3"></script>
+  </head>
+  <body>
+    <main id="calculator" class="container">
+      <div class="container">
+        <section class="calculator__top">
+          <div class="container row">
+            <h1 class="top__header">calc</h1>
+            <p class="top__info">Theme</p>
+            <div class="slider">
+              <div class="slider__numbers">
+                <strong> 1 </strong>
+                <strong> 2 </strong>
+                <strong> 3 </strong>
+              </div>
+              <div class="slider__item">
+                <strong class="slider__ball" @onclick="toggleOpen" ref="slider">
+                </strong>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="calculator__screen">
+          <div class="container row">
+            <div class="screen__item row">399,981</div>
+          </div>
+        </section>
+
+        <section class="calculator__bottom">
+          <div class="container row">
+            <div class="calculator__buttons grid">
+              <input type="button" value="7" />
+              <input type="button" value="8" />
+              <input type="button" value="9" />
+              <input type="button" value="DEL" />
+              <input type="button" value="4" />
+              <input type="button" value="5" />
+              <input type="button" value="6" />
+              <input type="button" value="+" />
+              <input type="button" value="1" />
+              <input type="button" value="2" />
+              <input type="button" value="3" />
+              <input type="button" value="-" />
+              <input type="button" value="." />
+              <input type="button" value="0" />
+              <input type="button" value="/" />
+              <input type="button" value="x" />
+              <input id="reset" type="button" value="RESET" />
+              <input id="sum" type="button" value="=" />
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://frontendmentor.io/profile/purplehippo9">Purplehippo911</a
+      >.
+    </div>
+
+    <script type="module">
+      import { createApp } from "vue";
+      import MyComponent from "./main.js";
+
+      createApp(MyComponent).mount("#app");
+    </script>
+    <script src="main.js"></script>
+  </body>
+</html>

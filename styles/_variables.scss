@@ -1,0 +1,97 @@
+/*    Theme 1      */
+
+// Backgrounds
+
+/*main background*/ 
+$Theme1Bg: hsl(222, 26%, 31%);
+/*toggle background, keypad background*/
+$KeypadBg1: hsl(223, 31%, 20%);
+$ScreenBg1: hsl(224, 36%, 15%);
+
+// Keys 
+
+/* key background, toggle */
+$ResetBg1: hsl(225, 21%, 49%);
+/* key shadow */
+$ResetShadow1: hsl(224, 28%, 35%);
+
+/* key background, toggle */
+$SumBg1: hsl(6, 63%, 50%);
+/* key shadow */
+$SumShadow1: hsl(6, 70%, 34%);
+
+/* key background */
+$KeyBg1: hsl(30, 25%, 89%);
+/* key shadow */
+$KeyShadow1: hsl(28, 16%, 65%);
+
+// Text
+
+$KeyText1: hsl(221, 14%, 31%);
+$White1: hsl(0, 0%, 100%);
+
+
+
+/*    Theme 2   */
+
+// Backgrounds
+
+$Theme2Bg: hsl(0, 0%, 90%);
+/* toggle background, keypad background */
+$KeypadBg2: hsl(0, 5%, 81%);
+/* screen background */
+$ScreenBg2: hsl(0, 0%, 93%);
+
+// Keys
+
+/* key background, toggle */
+$ResetBg2:hsl(185, 42%, 37%);
+/* key shadow */
+$ResetShadow2: hsl(185, 58%, 25%);
+
+/* key background, toggle */
+$SumBg2: hsl(25, 98%, 40%);
+/* key shadow */
+$SumShadow2: hsl(25, 99%, 27%);
+
+/* key background */
+$KeyBg2 : hsl(45, 7%, 89%);
+/* key shadow */
+$KeyShadow2: hsl(35, 11%, 61%);
+
+// Text
+
+$KeyText2: hsl(60, 10%, 19%);
+$White2: hsl(0, 0%, 100%);
+
+/*    Theme 3   */
+
+// Backgrounds
+
+/* main background */
+$Theme3Bg: hsl(268, 75%, 9%);
+/* Toggle background, keypad background, screen background */
+$KeypadBg3: hsl(268, 71%, 12%);
+
+// Keys
+
+/* key background */
+$ResetBg3: hsl(281, 89%, 26%);
+/* key shadow */
+$ResetShadow3:hsl(285, 91%, 52%);
+
+/* key background, toggle */
+$SumBg3: hsl(176, 100%, 44%);
+/* key shadow */
+$SumShadow3: hsl(177, 92%, 70%);
+
+/* key background */
+$KeyBg3:hsl(268, 47%, 21%);
+/* key shadow */
+$KeyShadow3:hsl(290, 70%, 36%);
+
+// Text
+
+$KeyText3: hsl(52, 100%, 62%);
+$Verydarkblue: hsl(198, 20%, 13%);
+$White3: hsl(0, 0%, 100%);
