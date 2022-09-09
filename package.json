@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/purplehippo911/calculatorApp/issues"
   },
-  "homepage": "https://github.com/purplehippo911/calculatorApp#readme"
+  "homepage": "https://github.com/purplehippo911/calculatorApp#readme",
+  "dependencies": {
+    "vue": "^3.2.39"
+  }
 }
