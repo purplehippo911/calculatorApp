@@ -11,23 +11,25 @@
     />
     <title>Calculator app</title>
     <link rel="stylesheet" href="./styles/styles.css" />
-    <script src="https://unpkg.com/vue@3"></script>
-  </head>
-  <body>
+  </script>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.10/dist/vue.js"></script>
+
     <main id="calculator" class="container">
       <div class="container">
         <section class="calculator__top">
           <div class="container row">
             <h1 class="top__header">calc</h1>
-            <p class="top__info">Theme</p>
+            <p class="top__info" v-on:click="toggleOpen">Theme</p>
             <div class="slider">
               <div class="slider__numbers">
                 <strong> 1 </strong>
                 <strong> 2 </strong>
                 <strong> 3 </strong>
               </div>
-              <div class="slider__item">
-                <strong class="slider__ball" @onclick="toggleOpen" ref="slider">
+              <div class="slider__item" v-on:click="toggleOpen">
+                <strong class="slider__ball" v-on:click="toggleOpen" ref="slider">
                 </strong>
               </div>
             </div>
@@ -76,11 +78,26 @@
       >.
     </div>
 
-    <script type="module">
-      import { createApp } from "vue";
-      import MyComponent from "./main.js";
+    <script>
+      
+      var app = new Vue({
+        data() {
+          return {
+            hi:"hi",
+            Clicked:false
+          }
+        },
+        template: '<div>{{ hi }}</div>',
+        methods: {
+          toggleOpen(e) {
+            console.log(e);
+          }
+        }
+      })
+      // import { createApp } from "vue";
+      // import MyComponent from "./main.js";
 
-      createApp(MyComponent).mount("#app");
+      // createApp(MyComponent).mount("#app");
     </script>
     <script src="main.js"></script>
   </body>
