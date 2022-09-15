@@ -23,7 +23,7 @@
         border-radius:20px;
     }
     .slider__ball {
-        background:$KeyBg1;
+        background:$SumBg1;
         width: auto;
         padding: .8rem;
         border-radius: 50%;
@@ -32,7 +32,8 @@
 
 .calculator__screen {
     background:$ScreenBg1;
-    padding: 2rem;
+    width:100%;
+    padding: 1.5rem;
     border-radius: 10px;
     .row {
         justify-content:flex-end;
@@ -46,6 +47,7 @@
 }
 
 .calculator__bottom {
+    border-radius:20px;
     background:$KeypadBg1;
     .row {
         justify-content: center;
@@ -56,13 +58,36 @@
     .calculator__buttons {
         width:90%;
         input {
+            border:0;
+            border-radius:10px;
+            box-shadow: 0px 4px 0px 0px $KeyShadow1;
+            background:$KeyBg1;
+            color:$KeyText1;
+            padding:.5em;
             font-size: 32px;
             font-weight:700;
-            background:$KeyBg1;
-            color:$KeyText1
+            cursor:pointer;
+            &:hover {
+                background:$White1;
+            }
         }
     }
     #reset, #sum {
         grid-column: span 2;
+        color:$White1;
+    }
+
+    #reset, #del {
+        background:$ResetBg1;
+        color:$White1;
+        box-shadow: 0px 4px 0px 0px $ResetShadow1;
+        text-align: center;
+        display:flex;
+        justify-content: center;
+    }
+
+    #sum {
+        background: $SumBg1;
+        box-shadow: 0px 4px 0px 0px $SumShadow1;
     }
 }

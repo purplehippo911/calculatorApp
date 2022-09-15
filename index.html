@@ -15,7 +15,7 @@
 </head>
 <body>
   
-  <main id="app" class="container">
+  <main id="app">
     <div class="container">
       <section class="calculator__top">
           <div class="container row">
@@ -37,8 +37,7 @@
 
         <section class="calculator__screen">
           <div class="container row">
-            <div class="screen__item row">399,981</div>
-            {{ message }}
+            <div class="screen__item row">399,981 {{ displayNumbers }}</div>
           </div>
         </section>
         
@@ -48,7 +47,7 @@
               <input type="button" value="7" />
               <input type="button" value="8" />
               <input type="button" value="9" />
-              <input type="button" value="DEL" />
+              <input  id="del" type="button" value="DEL" />
               <input type="button" value="4" />
               <input type="button" value="5" />
               <input type="button" value="6" />
