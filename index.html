@@ -14,11 +14,10 @@
   </script>
 </head>
 <body>
-    <script src="node_modules/vue/dist/vue.global.js"></script>
-
-    <main id="calculator" class="container">
-      <div class="container">
-        <section class="calculator__top">
+  
+  <main id="app" class="container">
+    <div class="container">
+      <section class="calculator__top">
           <div class="container row">
             <h1 class="top__header">calc</h1>
             <p class="top__info" v-on:click="toggleOpen">Theme</p>
@@ -42,7 +41,7 @@
             {{ message }}
           </div>
         </section>
-
+        
         <section class="calculator__bottom">
           <div class="container row">
             <div class="calculator__buttons grid">
@@ -79,22 +78,8 @@
       >.
     </div>
     
+    <script src="https://unpkg.com/vue@3.0.5"></script>
     <script src="main.js"></script>
-    <script type="module">
-    //   import { createApp } from 'vue';
-      
-    // createApp({
-    //   data() {
-    //     return {
-    //       message: 'Hello Vue!'
-    //     }
-    //   }
-    // }).mount('#app')
-
-      import { createApp } from "vue";
-      import MyComponent from "./main.js";
-
-      createApp(MyComponent).mount("#app");
-    </script>
   </body>
-</html>
+  </html>
+  
