@@ -26,15 +26,10 @@
 /* key background */
 /* key shadow */
 .calculator__top h1 {
+  font-size: 32px;
   margin-right: auto;
   width: 15%;
   text-align: center;
-}
-.calculator__top .slider {
-  margin-left: 1.5rem;
-  width: 15%;
-  display: grid;
-  grid-template-rows: repeat(2, 1fr);
 }
 .calculator__top .slider__item, .calculator__top .slider__numbers {
   width: 100%;
@@ -42,6 +37,12 @@
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
   justify-items: center;
+}
+.calculator__top .slider {
+  margin-left: 1.5rem;
+  width: 15%;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
 }
 .calculator__top .slider__item {
   background: hsl(223deg, 31%, 20%);
@@ -57,8 +58,7 @@
 
 .calculator__screen {
   background: hsl(224deg, 36%, 15%);
-  width: 100%;
-  padding: 1.5rem;
+  padding: 2rem;
   border-radius: 10px;
 }
 .calculator__screen .row {
@@ -177,6 +177,9 @@
   background: hsl(176deg, 100%, 44%);
   box-shadow: 0px 4px 0px 0px hsl(177deg, 92%, 70%);
 }
+.neon .attributes a {
+  color: hsl(222deg, 26%, 31%);
+}
 
 body {
   margin: 0;
@@ -199,7 +202,7 @@ main {
 }
 
 section {
-  width: 100%;
+  max-width: 100%;
   padding: 2rem;
   margin: 1rem 0;
 }
@@ -216,10 +219,11 @@ section {
 }
 
 .attribution {
-  font-size: 11px;
+  font-size: 16px;
   text-align: center;
   margin-bottom: 2rem;
 }
 .attribution a {
   text-decoration: none;
+  color: hsl(52deg, 100%, 62%);
 }/*# sourceMappingURL=styles.css.map */
