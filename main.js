@@ -1,3 +1,4 @@
+// https://www.youtube.com/watch?v=QS6Y0ezhyCs
 const app = Vue.createApp({
     data() {
         return {
@@ -32,16 +33,31 @@ const app = Vue.createApp({
             document.body.classList.add(`${this.theme[0]}`);
     
         }
-    },
-    displayNumber() {
-        if(inUse) {
-            this.$refs.screen.textContent = "";
-            return `${num1} ${symbol} ${num2}`;
-        }
-    }
-    
-    }
+        },
+        displayNumbers() {
+            if(0 == 0) {
+                console.log("hi");
+                this.$refs.screen.textContent = "";
+                this.num1 = 5;
+                this.num2 = 6;
+                this.symbol = "+";
+                this.$refs.screen.innerHTML = `${this.num1} ${this.symbol} ${this.num2}`;
+            }
+        },
+
+        sum() {
+        let buttons = Array.from(document.querySelectorAll(".button"));
+
+        buttons.map( button => {
+            button.addEventListener("click", (e) => {
+                console.log(e.target);
+                console.log(e.target.innerText);
+                this.$refs.screen.textContent = e.target.innerText;
+            })
+            })
         
-    })
+        }
+    }   
+})
     
     app.mount('#app')
