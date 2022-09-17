@@ -1,0 +1,72 @@
+.light{
+    background:$Theme2Bg;
+    color:$KeyText2;
+    .calculator__top {
+        color:$KeyText2;
+        .slider__item {
+            background:$KeypadBg2;
+        }
+    }
+    .calculator__screen {
+        background: $ScreenBg2;
+    }
+    .calculator__bottom {
+        background: $KeypadBg2;
+        .calculator__buttons input {
+            background:$KeyBg2;
+            color:$KeyText2;
+            box-shadow:0px 4px 0px 0px $KeyShadow2;
+        }
+        
+        #reset, #del {
+            background:$ResetBg2;
+            box-shadow:0px 4px 0px 0px $ResetShadow2;
+        }
+        
+        #sum {
+            background:$SumBg2;
+            box-shadow:0px 4px 0px 0px $SumShadow2;
+
+        }
+    }
+}
+
+.neon {
+    background:$Theme3Bg;
+    color:$KeyText3;
+    .calculator__top {
+        color:$KeyText3;
+        .slider__item {
+            background:$KeypadBg3;
+            .slider__ball {
+                background: $SumBg3;
+            }
+        }
+    }
+    .calculator__screen {
+        background: $KeypadBg3;
+    }
+    .calculator__bottom {
+        background: $KeypadBg3;
+        .calculator__buttons input {
+            background:$KeyBg3;
+            color:$KeyText3;
+            box-shadow:0px 4px 0px 0px $KeyShadow3;
+        }
+        
+        #reset, #del {
+            background:$ResetBg3;
+            box-shadow:0px 4px 0px 0px $ResetShadow3;
+        }
+        
+        #sum {
+            background:$SumBg3;
+            box-shadow:0px 4px 0px 0px $SumShadow3;
+
+        }
+    }
+    .attributes a {
+        color:$Theme1Bg;
+    }
+}
+

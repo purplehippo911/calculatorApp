@@ -14,9 +14,10 @@
   </script>
 </head>
 <body>
-    <main id="app" class="container">
-      <div class="container">
-        <section class="calculator__top">
+  
+  <main id="app">
+    <div class="container">
+      <section class="calculator__top">
           <div class="container row">
             <h1 class="top__header">calc</h1>
             <p class="top__info">Theme</p>
@@ -36,32 +37,34 @@
 
         <section class="calculator__screen">
           <div class="container row">
-            <div class="screen__item row">399,981</div>
-            {{ message }}
+            <div class="screen__item row" ref="screen">399,981</div>
           </div>
         </section>
-
+        
         <section class="calculator__bottom">
           <div class="container row">
             <div class="calculator__buttons grid">
-              <input type="button" value="7" />
-              <input type="button" value="8" />
-              <input type="button" value="9" />
-              <input type="button" value="DEL" />
-              <input type="button" value="4" />
-              <input type="button" value="5" />
-              <input type="button" value="6" />
-              <input type="button" value="+" />
-              <input type="button" value="1" />
-              <input type="button" value="2" />
-              <input type="button" value="3" />
-              <input type="button" value="-" />
-              <input type="button" value="." />
-              <input type="button" value="0" />
-              <input type="button" value="/" />
-              <input type="button" value="x" />
-              <input id="reset" type="button" value="RESET" />
-              <input id="sum" type="button" value="=" />
+              <input type="button" value="7" class="button number" v-on:click="sum" />
+              <input type="button" value="8" class="button number" v-on:click="sum" />
+              <input type="button" value="9" class="button number" v-on:click="sum" />
+              <input  id="del" type="button" value="DEL" class="button special" v-on:click="sum"/>
+
+              <input type="button" value="4" class="button number" v-on:click="sum" />
+              <input type="button" value="5" class="button number" v-on:click="sum" />
+              <input type="button" value="6" class="button number" v-on:click="sum"/>
+              <input type="button" value="+" class="button symbol" v-on:click="sum"/>
+
+              <input type="button" value="1" class="button number" v-on:click="sum"/>
+              <input type="button" value="2" class="button number" v-on:click="sum"/>
+              <input type="button" value="3" class="button number" v-on:click="sum"/>
+              <input type="button" value="-" class="button symbol" v-on:click="sum"/>
+
+              <input type="button" value="." class="button symbol" v-on:click="sum"/>
+              <input type="button" value="0" class="button number" v-on:click="sum" />
+              <input type="button" value="/" class="button symbol" v-on:click="sum" />
+              <input type="button" value="x" class="button symbol" v-on:click="sum" />
+              <input id="reset" type="button" value="RESET" ref="reset" v-on:click="sum" class="button special"/>
+              <input id="sum" type="button" value="="  ref="sum" v-on:click="sum" class="button special"/>
             </div>
           </div>
         </section>
@@ -79,4 +82,5 @@
     <script src="https://unpkg.com/vue@3"></script>
     <script src="main.js"></script>
   </body>
-</html>
+  </html>
+  
