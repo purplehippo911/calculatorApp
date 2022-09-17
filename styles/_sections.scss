@@ -6,26 +6,37 @@
     }
     .slider{
         margin-left: 1.5rem;
-        width: 15%;
+        width: 30%;
         display: grid;
         grid-template-rows: repeat(2, 1fr);
+        align-items:center;
+        justify-items:center;
     }
+
+    .slider__numbers{
+        justify-content: space-between;
+    }
+
     .slider__item, .slider__numbers {
         width: 100%;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        display: flex;
         align-items: center;
-        justify-items: center;
     }
+
     .slider__item {
         background:$KeypadBg1;
-        padding: .2rem;
+        padding: .8rem;
         border-radius:20px;
+        max-height: 20%;
+        width:75%;
     }
+
     .slider__ball {
+        position:relative;
+        left:-10px;
         background:$KeyBg1;
         width: auto;
-        padding: .8rem;
+        padding: 1rem;
         border-radius: 50%;
      }
 }
