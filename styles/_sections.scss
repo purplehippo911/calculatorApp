@@ -6,8 +6,10 @@
     }
     .slider__item, .slider__numbers {
         width: 100%;
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
         align-items: center;
+        justify-items: center;
     }
     .slider{
         margin-left: 1.5rem;
@@ -17,16 +19,16 @@
     }
     .slider__item {
         background:$KeypadBg1;
-        padding: .8rem;
+        padding: .2rem;
         border-radius:20px;
-        max-height: 20%;
-        width:75%;
+        // max-height: 20%;
+        // width:75%;
     }
 
     .slider__ball {
         background:$SumBg1;
         width: auto;
-        padding: 1rem;
+        padding: .8rem;
         border-radius: 50%;
      }
 }
@@ -37,6 +39,9 @@
     border-radius: 10px;
     .row {
         justify-content:flex-end;
+    }
+    .container {
+        max-height:96px;
     }
     .screen__item {
         font-size: 32px;

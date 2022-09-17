@@ -4,9 +4,6 @@ const app = Vue.createApp({
         return {
          i: 0,
          theme: ["dark", "light", "neon"],
-         num1: 0,
-         num2: 0,
-         symbol: null,
          inUse: false,
         }
     },    
@@ -34,30 +31,33 @@ const app = Vue.createApp({
     
         }
         },
-        displayNumbers() {
-            if(0 == 0) {
-                console.log("hi");
-                this.$refs.screen.textContent = "";
-                this.num1 = 5;
-                this.num2 = 6;
-                this.symbol = "+";
-                this.$refs.screen.innerHTML = `${this.num1} ${this.symbol} ${this.num2}`;
+        displayNumbers(e) {
+            this.$refs.screenText.innerText = " ";
+            this.$refs.screen.innerText += e.target.value;
+        },
+        sum() {
+            this.$refs.screenText.innerText = " ";
+            try {
+                this.$refs.screen.innerText = eval(this.$refs.screen.innerText);
+            } catch {
+                this.$refs.screen.innerText = 'Error';
             }
         },
-
-        sum() {
-        let buttons = Array.from(document.querySelectorAll(".button"));
-
-        buttons.map( button => {
-            button.addEventListener("click", (e) => {
-                console.log(e.target);
-                console.log(e.target.innerText);
-                this.$refs.screen.textContent = e.target.innerText;
-            })
-            })
+        del() {
+            this.$refs.screenText.innerText = " ";
+            if(this.$refs.screen.innerText) {
+                this.$refs.screen.innerText = this.$refs.screen.innerText.slice(0, -1);
+            } 
+        },
         
+        reset(){
+            this.$refs.screenText.innerText = " ";
+            if(this.$refs.screen.innerText) {
+                this.$refs.screen.innerText = "";
+            }
         }
-    }   
+    }
+
 })
 
 app.mount("#app");
