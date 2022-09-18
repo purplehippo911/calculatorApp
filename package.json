@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/purplehippo911/calculatorApp#readme",
   "dependencies": {
+    "animate.css": "^4.1.1",
     "vue": "^3.2.39"
   }
 }

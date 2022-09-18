@@ -1,4 +1,3 @@
-// https://www.youtube.com/watch?v=QS6Y0ezhyCs
 const app = Vue.createApp({
     data() {
         return {
@@ -12,28 +11,28 @@ const app = Vue.createApp({
     
         toggleOpen() {
             this.i++;
-        if(this.i == 2 )  {
-            document.body.classList.remove(`${this.theme[0]}`);
-            this.$refs.slider.style.gridColumnStart = "2";
-            document.body.classList.add(`${this.theme[1]}`);
-        }
-        if(this.i == 4 )  {
-            document.body.classList.remove(`${this.theme[1]}`);
-            this.$refs.slider.style.gridColumnStart = "3";
-            document.body.classList.add(`${this.theme[2]}`);
-            
-        }
-        if(this.i > 5 )  {
-            this.i = 0;
-            document.body.classList.remove(`${this.theme[2]}`);
-            this.$refs.slider.style.gridColumnStart = "1";
-            document.body.classList.add(`${this.theme[0]}`);
+            if(this.i == 2 )  {
+                document.body.classList.remove(`${this.theme[0]}`);
+                this.$refs.slider.style.gridColumnStart = "2";
+                document.body.classList.add(`${this.theme[1]}`);
+            }
+            if(this.i == 4 )  {
+                document.body.classList.remove(`${this.theme[1]}`);
+                this.$refs.slider.style.gridColumnStart = "3";
+                document.body.classList.add(`${this.theme[2]}`);
+                
+            }
+            if(this.i > 5 )  {
+                this.i = 0;
+                document.body.classList.remove(`${this.theme[2]}`);
+                this.$refs.slider.style.gridColumnStart = "1";
+                document.body.classList.add(`${this.theme[0]}`);
     
         }
         },
         displayNumbers(e) {
             this.$refs.screenText.innerText = " ";
-            this.$refs.screen.innerText += e.target.value;
+            this.$refs.screen.innerText += e.target.innerText;
         },
         sum() {
             this.$refs.screenText.innerText = " ";
@@ -41,6 +40,7 @@ const app = Vue.createApp({
                 this.$refs.screen.innerText = eval(this.$refs.screen.innerText);
             } catch {
                 this.$refs.screen.innerText = 'Error';
+                setTimeout(this.reset, 2000);
             }
         },
         del() {

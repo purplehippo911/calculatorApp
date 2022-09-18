@@ -11,13 +11,15 @@
     />
     <title>Calculator app</title>
     <link rel="stylesheet" href="./styles/styles.css" />
-  </script>
-</head>
-<body>
-  
-  <main id="app">
-    <div class="container">
-      <section class="calculator__top">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+  <body>
+    <main id="app">
+      <div class="container">
+        <section class="calculator__top">
           <div class="container row">
             <h1 class="top__header">calc</h1>
             <p class="top__info">Theme</p>
@@ -28,7 +30,11 @@
                 <strong> 3 </strong>
               </div>
               <div class="slider__item" v-on:click="toggleOpen">
-                <strong class="slider__ball" v-on:click="toggleOpen" ref="slider">
+                <strong
+                  class="slider__ball"
+                  v-on:click="toggleOpen"
+                  ref="slider"
+                >
                 </strong>
               </div>
             </div>
@@ -38,35 +44,95 @@
         <section class="calculator__screen">
           <div class="container row">
             <div class="screen__item row" ref="screen">
-                <strong ref="screenText">399,981</strong>  
+              <strong ref="screenText">399,981</strong>
             </div>
           </div>
         </section>
-        
+
         <section class="calculator__bottom">
           <div class="container row">
             <div class="calculator__buttons grid">
-              <input type="button" value="7" class="button number" v-on:click="displayNumbers" />
-              <input type="button" value="8" class="button number" v-on:click="displayNumbers" />
-              <input type="button" value="9" class="button number" v-on:click="displayNumbers" />
-              <input  id="del" type="button" value="DEL" class="button special" v-on:click="del"/>
+              <button class="button number" v-on:click="displayNumbers">
+                7
+              </button>
+              <button
+                value="8"
+                class="button number"
+                v-on:click="displayNumbers"
+              >
+                8
+              </button>
+              <button class="button number" v-on:click="displayNumbers">
+                9
+              </button>
+              <button
+                id="del"
+                type="button"
+                class="button special"
+                v-on:click="del"
+              >
+                DEL
+              </button>
 
-              <input type="button" value="4" class="button number" v-on:click="displayNumbers" />
-              <input type="button" value="5" class="button number" v-on:click="displayNumbers" />
-              <input type="button" value="6" class="button number" v-on:click="displayNumbers"/>
-              <input type="button" value="+" class="button symbol" v-on:click="displayNumbers"/>
+              <button class="button number" v-on:click="displayNumbers">
+                4
+              </button>
+              <button class="button number" v-on:click="displayNumbers">
+                5
+              </button>
+              <button class="button number" v-on:click="displayNumbers">
+                6
+              </button>
+              <button class="button symbol" v-on:click="displayNumbers">
+                +
+              </button>
 
-              <input type="button" value="1" class="button number" v-on:click="displayNumbers"/>
-              <input type="button" value="2" class="button number" v-on:click="displayNumbers"/>
-              <input type="button" value="3" class="button number" v-on:click="displayNumbers"/>
-              <input type="button" value="-" class="button symbol" v-on:click="displayNumbers"/>
+              <button class="button number" v-on:click="displayNumbers">
+                1
+              </button>
+              <button class="button number" v-on:click="displayNumbers">
+                2
+              </button>
+              <button class="button number" v-on:click="displayNumbers">
+                3
+              </button>
+              <button class="button symbol" v-on:click="displayNumbers">
+                -
+              </button>
 
-              <input type="button" value="." class="button symbol" v-on:click="displayNumbers"/>
-              <input type="button" value="0" class="button number" v-on:click="displayNumbers" />
-              <input type="button" value="/" class="button symbol" v-on:click="displayNumbers" />
-              <input type="button" value="x" class="button symbol" v-on:click="displayNumbers" />
-              <input id="reset" type="button" value="RESET" ref="reset" v-on:click="reset" class="button special"/>
-              <input id="sum" type="button" value="="  ref="sum" v-on:click="sum" class="button special"/>
+              <button class="button symbol" v-on:click="displayNumbers">
+                .
+              </button>
+              <button class="button symbol" v-on:click="displayNumbers">
+                0
+              </button>
+              <button class="button symbol" v-on:click="displayNumbers">
+                /
+              </button>
+              <button class="button symbol" v-on:click="displayNumbers">
+                *
+              </button>
+
+              <button
+                id="reset"
+                value="RESET"
+                ref="reset"
+                v-on:click="reset"
+                class="button special"
+              >
+                RESET
+              </button>
+
+              <button
+                id="sum"
+                type="button"
+                value="="
+                ref="sum"
+                @click="sum"
+                class="button special"
+              >
+                =
+              </button>
             </div>
           </div>
         </section>
@@ -84,5 +150,4 @@
     <script src="https://unpkg.com/vue@3"></script>
     <script src="main.js"></script>
   </body>
-  </html>
-  
+</html>

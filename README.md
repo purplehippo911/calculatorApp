@@ -4,17 +4,18 @@ This is a solution to the [Calculator app challenge on Frontend Mentor](https://
 
 ## Table of contents
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
+- [Frontend Mentor - Calculator app solution](#frontend-mentor---calculator-app-solution)
+  - [Table of contents](#table-of-contents)
+  - [Overview](#overview)
+    - [The challenge](#the-challenge)
+    - [Screenshot](#screenshot)
+    - [Links](#links)
+  - [My process](#my-process)
+    - [Built with](#built-with)
+    - [What I learned](#what-i-learned)
+    - [Continued development](#continued-development)
+    - [Useful resources](#useful-resources)
+  - [Author](#author)
 
 ## Overview
 
@@ -29,13 +30,17 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+Mobile:📱📱
+![Mobile](./design/mobileScreenshot.png/)
 
+Desktop💻🖥
+![Desktop](./design/desktopScreenshot.png/)
 
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [My solution](https://www.frontendmentor.io/solutions/calculator-app-with-vue-and-sass-odRtLkzEhc)
+
 - Live Site URL: [githubPages](https://purplehippo911.github.io/calculatorApp/)
 
 ## My process
@@ -52,46 +57,76 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+I learned how to use the `eval()`-function to run javascript code in HTML. This is my first challenge using vue, so I got to practice and learn some more about how to use it without the CLI. 
 
 To see how you can add code snippets, see below:
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
+
+```scss
+.calculator__bottom {
+    border-radius:20px;
+    background:$KeypadBg1;
+    .row {
+        justify-content: center;
+    }
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .calculator__buttons {
+        width:90%;
+        input {
+            border:0;
+            border-radius:10px;
+            box-shadow: 0px 4px 0px 0px $KeyShadow1;
+            background:$KeyBg1;
+            color:$KeyText1;
+            padding:.5em;
+            font-size: 32px;
+            font-weight:700;
+            cursor:pointer;
+            &:hover {
+                background:$White1;
+            }
+        }
+    }
 ```
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+toggleOpen() {
+        this.i++;
+        if(this.i == 2 )  {
+            document.body.classList.remove(`${this.theme[0]}`);
+            this.$refs.slider.style.gridColumnStart = "2";
+            document.body.classList.add(`${this.theme[1]}`);
+        }
+        if(this.i == 4 )  {
+            document.body.classList.remove(`${this.theme[1]}`);
+            this.$refs.slider.style.gridColumnStart = "3";
+            document.body.classList.add(`${this.theme[2]}`);
+            
+        }
+        if(this.i > 5 )  {
+            this.i = 0;
+            document.body.classList.remove(`${this.theme[2]}`);
+            this.$refs.slider.style.gridColumnStart = "1";
+            document.body.classList.add(`${this.theme[0]}`);
+    
+        }
+      }
 ```
 
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+I will try to perfect my vue and javascript skills, by continuing to learn about new ways to use them. After that I want to brush up on my basic python skills.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [calculator-app tutorial](https://www.youtube.com/watch?v=QS6Y0ezhyCs) - This helped me with the programming part of the calculator. It's a very simple tutorial, which helped me a lot. 
+- [W3Schools.com](https://www.w3schools.com) - This is an amazing website which helped me when I forgot how to do code. 
+- [vuejs.org](https://vuejs.org/guide/essentials/) - This helped me when I was unsure about how to use something in vue.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Website - [My website](https://purplehippo911.github.io/website/))
+- Frontend Mentor - [@purplehippo911](https://www.frontendmentor.io/profile/purplehippo911)
+- CodePen - [@htmlsquid](https://codepen.io/htmlsquid)
