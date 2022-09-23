@@ -122,7 +122,7 @@ I will try to perfect my vue and javascript skills, by continuing to learn about
 ### Useful resources
 
 - [calculator-app tutorial](https://www.youtube.com/watch?v=QS6Y0ezhyCs) - This helped me with the programming part of the calculator. It's a very simple tutorial, which helped me a lot. 
-- [W3Schools.com](https://www.w3schools.com) - This is an amazing website which helped me when I forgot how to do code. 
+- [W3Schools.com](https://www.w3schools.com) - This is an amazing website which helped me when I forgot how to use a certain piece of code, like how to loop over something and etc. 
 - [vuejs.org](https://vuejs.org/guide/essentials/) - This helped me when I was unsure about how to use something in vue.
 
 ## Author
